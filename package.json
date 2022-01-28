@@ -1,0 +1,22 @@
+{
+  "name": "ymj-electron-app",
+  "version": "1.0.0",
+  "description": "electron学习记录",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laotaipo/ymj-electron-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laotaipo/ymj-electron-app/issues"
+  },
+  "homepage": "https://github.com/laotaipo/ymj-electron-app#readme",
+  "devDependencies": {
+    "electron": "^16.0.8"
+  }
+}
