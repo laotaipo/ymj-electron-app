@@ -55,3 +55,25 @@ Windows on ARM: TODO
 Tray：托盘图标
 自定义窗口：
 
+性能 TODO待完善
+    谨慎的加载模块
+    过早的加载和执行代码
+        只有当需要的时候才分配资源，而不是在启动时分配所有
+    阻塞主进程
+        对于长期占用CPU的繁重任务，使用worker threads，考虑将他们移动至BrowserWindow，或（作为一个最后手段）生成一个专用进程
+        尽可能避免使用同步IPC和remote模块。使用remote模块的时候，非常容易不知情地阻塞UI进程
+        每当使用nodejs模块，尽量使用异步的
+    阻塞渲染进程
+    不必要的polyfills
+        TODO polyfills是啥
+
+    不必要的或者阻塞的网络请求
+    打包你的代码
+安全性
+
+开发
+    进程沙盒化 TODO
+应用部署
+    electron-froge
+    electron-builder
+    electron-builder
