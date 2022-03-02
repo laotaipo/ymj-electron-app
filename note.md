@@ -77,3 +77,33 @@ Tray：托盘图标
     electron-froge
     electron-builder
     electron-builder
+
+
+主进程向渲染进程通讯
+
+主进程使用 win.webContents.send 发送消息
+渲染进程使用 ipcRenderer.on 接收消息
+
+
+
+渲染进程向主进程通信
+
+渲染进程使用 ipcRenderer.send 或者 ipcRenderer.invoke 发送消息
+主进程使用 ipcMain.on或者ipcMain.handle 接收消息
+
+
+
+渲染进程向渲染进程通信
+
+
+
+通知事件
+
+通过主进程转发（Electron 5之前）
+ipcRenderer.sendTo（Electron 5之后）
+
+
+数据共享
+
+web技术（localStorage、sessionStorage、indexedDB、可嵌入型数据库等）
+使用remote(尽量少用，容易影响性能)
